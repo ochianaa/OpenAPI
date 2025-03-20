@@ -5,7 +5,7 @@ const db = mysql.createConnection({ host: "localhost",user: "root", database: "o
 const app = express();
 
 app.get('/users', (req, res) => {
-    db.query('SELECT * FROM user', (err, results) => {
+    db.query('SELECT * FROM users', (err, results) => {
         if (err) {
             res.status(500).send('Internal Server Error');
             return;
@@ -14,4 +14,4 @@ app.get('/users', (req, res) => {
         res.json(results);
     });
 });
-app.listen(3000, () => console.log('Server berjalan di http://localhost:4000'));
+app.listen(4000, () => console.log('Server berjalan di http://localhost:4000'));
