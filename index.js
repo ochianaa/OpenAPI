@@ -15,4 +15,4 @@ const server = http.createServer((req, res) => {
         res.end(JSON.stringify(results));
     });
 });
-server.listen(3000, () => console.log('Server berjalan di http://localhost:3000'));
+server.listen(4000, () => console.log('Server berjalan di http://localhost:4000'));
